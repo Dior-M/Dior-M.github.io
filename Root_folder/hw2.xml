@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="hw2.css" ?>
+
 <catalog>
-    
-    <!-- Link to the external CSS file -->
-    <?xml-stylesheet type="text/css" href="hw2.css"?>
-    
+  
+
+    <headline>
+        Book Catalog
+    </headline>  
     <!-- Books are being donated by instructors and publishers -->
     
     <!-- Book 1 -->
-    <book pages="280">
-        <title><![CDATA[Introduction to HTML]]></title>
-        <author><![CDATA[Joseph Gardner]]></author>
+    <book>
+        <title lang="en">Introduction to HTML</title>
+        <author>Joseph Gardner</author>
         <publisher><![CDATA[Press ©]]></publisher>
     </book>
     
     <!-- Book 2 -->
     <book pages="320">
-        <title><![CDATA[Networking Infrastructure]]></title>
+        <title lang="en">Networking Infrastructure</title>
         <author><![CDATA[Adam Douglas & Janice Dall]]></author>
         <publisher><![CDATA[Cengage;©]]></publisher>
     </book>
     
     <!-- Book 3 -->
     <book pages="380">
-        <title><![CDATA[Soft Skills in IT]]></title>
-        <author><![CDATA[Mark Hunter]]></author>
+        <title lang="en">Soft Skills in IT</title>
+        <author>Mark Hunter</author>
         <publisher><![CDATA[Bolding Publisher©]]></publisher>
     </book>
     
     <!-- Book 4 -->
     <book pages="200">
-        <title><![CDATA[Network Security]]></title>
+        <title lang="en">Network Security</title>
         <author><![CDATA[Jennifer Starter & Yuri Adantov]]></author>
         <publisher><![CDATA[Wrox©]]></publisher>
     </book>
     
     <!-- Book 5 -->
     <book pages="330">
-        <title><![CDATA[XML & JSON]]></title>
-        <author><![CDATA[Stuart Bell]]></author>
+        <title lang="en"><![CDATA[XML & JSON]]></title>
+        <author>Stuart Bell</author>
         <publisher><![CDATA[Cengage;©]]></publisher>
     </book>
 </catalog>
-

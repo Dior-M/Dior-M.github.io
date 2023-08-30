@@ -1,0 +1,59 @@
+
+
+/* Set font and size for the entire document */
+catalog {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    background-color: lightgray;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+
+
+/* Style the title of the page */
+headline {
+    text-align:center;
+    color: green ; /* Orange color */
+    font-size: 24px; /* Larger font size */
+    margin-top: 32px; /* Increased margin */
+}
+
+/* The title of the books should be in bold and red color */
+book title {
+    color: red;
+    font-weight: bold;
+    display: block;
+}
+
+
+/* Each odd book should be presented with a light blue background */
+book:nth-child(odd) {
+    background-color: white;
+}
+
+/* Each even book should be presented with a white background */
+book:nth-child(even) {
+    background-color: lightblue;
+}
+
+/* Each book should be presented one below the other */
+book {
+    display: block;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Style author and publisher information */
+book author, book publisher {
+    color: #555; /* Darker gray color */
+    margin: 5px 0;
+    display: block;
+}
+
