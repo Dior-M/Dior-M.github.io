@@ -10,7 +10,7 @@
     <!-- Books are being donated by instructors and publishers -->
     
     <!-- Book 1 -->
-    <book ages="250">
+    <book pages="250">
         <title lang="en">Introduction to HTML</title>
         <author>Joseph Gardner</author>
         <publisher><![CDATA[Press ©]]></publisher>
