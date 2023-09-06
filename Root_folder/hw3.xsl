@@ -7,7 +7,7 @@
           table {
             border-collapse: collapse;
             width: 100%;
-            box-shadow: 0px 0px 0.3125em rgba(0, 0, 0, 0.3); /* Add shadow effect */
+            box-shadow: 0em 0em 0.3125em rgba(0, 0, 0, 0.3); /* Add shadow effect */
           }
           th {
             border: 0.0625em solid #0073e6; /* Border color is blue (#0073e6) */
