@@ -7,11 +7,11 @@
           table {
             border-collapse: collapse;
             width: 100%;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+            box-shadow: 0px 0px 0.3125em rgba(0, 0, 0, 0.3); /* Add shadow effect */
           }
           th {
-            border: 1px solid #0073e6; /* Border color is blue (#0073e6) */
-            padding: 8px;
+            border: 0.0625em solid #0073e6; /* Border color is blue (#0073e6) */
+            padding: 0.5em;
             background-color: #f0f0f0; /* Background color for header row is light gray (#f0f0f0) */
           }
           th.name {
@@ -24,8 +24,8 @@
             text-align: left; /* Align the Email column to the left */
           }
           td {
-            border: 1px solid #0073e6; /* Border color is blue (#0073e6) */
-            padding: 8px;
+            border: 0.0625em solid #0073e6; /* Border color is blue (#0073e6) */
+            padding: 0.5em;
           }
           td.account {
             text-align: right; /* Align the Account Total column to the right */
@@ -36,6 +36,9 @@
           }
           td.phone {
             text-align: center; /* Align the Phone column to the center */
+          }
+          body {
+            font-size: 1em; /* Set the base font size in em */
           }
         </style>
       </head>
