@@ -54,6 +54,7 @@
                         color: #333; /* Darker text color for list items */
                     }
                 </style>
+                 <title>ABC Financial Startup</title> <!-- Title for your HTML page -->
             </head>
             <body>
                 <header>
