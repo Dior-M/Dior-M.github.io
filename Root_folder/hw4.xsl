@@ -68,7 +68,7 @@
                     <p>We have started with 1 client a little bit more than 10 years ago and now we have <xsl:value-of select="count(//Client)" /> clients!</p>
                     <p>These are our clients:
                     <xsl:for-each select="//Client">
-                            <xsl:value-of select="Name" />
+                            <xsl:value-of select="Name"/>
                             <xsl:if test="position() &lt; last() - 1">, </xsl:if>
                             <xsl:if test="position() = last() - 1">, and </xsl:if>
                         </xsl:for-each>.
