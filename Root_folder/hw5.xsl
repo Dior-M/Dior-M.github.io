@@ -11,17 +11,16 @@
             width: 100%;
           }
           th, td {
-            padding: 0.5em 1em; /* Adjust padding using em */
+            padding: 0.5em 1em;
             text-align: left;
-            box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.2); /* Adjust box-shadow using em */
+            box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.2);
           }
           th {
             background-color: #e6e6fa; /* Lavender */
             color: #000;
-            font-weight: bold;
           }
           tr:not(:first-child) {
-            background-color: transparent; /* Transparent background for all rows except the first */
+            background-color: transparent;
           }
         </style>
       </head>
@@ -43,15 +42,33 @@
   </xsl:template>
 
   <xsl:template match="Prod">
-    <tr>
-      <td><xsl:value-of select="@ProdID" /></td>
-      <td><xsl:value-of select="Details/Short_Desc" /></td>
-      <td><xsl:value-of select="Color" /></td>
-      <td><xsl:value-of select="Unit_Price" /></td>
-      <td><xsl:value-of select="Quantity" /></td>
-      <td><xsl:value-of select="Loc" /></td>
-    </tr>
+    <xsl:choose>
+      <!-- Check if the product is valid based on DTD rules -->
+      <xsl:when test="@ProdID and Details/Short_Desc and Quantity and Unit_Price and Loc">
+        <tr>
+          <td><xsl:value-of select="@ProdID" /></td>
+          <td><xsl:value-of select="Details/Short_Desc" /></td>
+          <td><xsl:value-of select="Color" /></td>
+          <td><xsl:value-of select="Unit_Price" /></td>
+          <td><xsl:value-of select="Quantity" /></td>
+          <td><xsl:value-of select="Loc" /></td>
+        </tr>
+      </xsl:when>
+      <!-- Display "Invalid Product" for products that don't meet DTD rules -->
+      <xsl:otherwise>
+        <tr>
+          <td>Invalid Product</td>
+          <td>Invalid Product</td>
+          <td>Invalid Product</td>
+          <td>Invalid Product</td>
+          <td>Invalid Product</td>
+          <td>Invalid Product</td>
+        </tr>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
 </xsl:stylesheet>
+
+
 
