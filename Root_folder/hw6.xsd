@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Defining the root element -->
+  <xs:element name="Member">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Name" type="NameType" minOccurs="1" maxOccurs="1" />
+        <xs:element name="Age" type="AgeType" minOccurs="0" default="21" />
+        <xs:element name="Job" type="xs:string" minOccurs="0" />
+        <xs:element name="Date" type="xs:date" minOccurs="1" />
+        <xs:element name="Phone" type="PhoneNumber" minOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Custom NameType with maximum length -->
+  <xs:simpleType name="NameType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Custom AgeType with minimum value and default value -->
+  <xs:simpleType name="AgeType">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="21" />
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Phone number pattern -->
+  <xs:simpleType name="PhoneNumber">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{3}-\d{3}-\d{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
