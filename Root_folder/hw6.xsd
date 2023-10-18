@@ -2,14 +2,20 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <!-- Defining the root element -->
-  <xs:element name="Member">
+  <xs:element name="Members">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="Name" type="NameType" minOccurs="1" maxOccurs="1" />
-        <xs:element name="Age" type="AgeType" minOccurs="0" default="21" />
-        <xs:element name="Job" type="xs:string" minOccurs="0" />
-        <xs:element name="Date" type="xs:date" minOccurs="1" />
-        <xs:element name="Phone" type="PhoneNumber" minOccurs="1" />
+        <xs:element name="Member" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="NameType" minOccurs="1" maxOccurs="1" />
+              <xs:element name="Age" type="AgeType" minOccurs="0" default="21" />
+              <xs:element name="Job" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" type="xs:date" minOccurs="1" />
+              <xs:element name="Phone" type="PhoneNumber" minOccurs="1" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -37,3 +43,4 @@
   </xs:simpleType>
 
 </xs:schema>
+
