@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="hw6.xsl"?>
 
-<Members xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hw6.xsd">
+<Members xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/Dior-M/Dior-M.github.io/blob/main/Root_folder/hw6.xsd">
   <Member>
     <Name>Jonathan Mark</Name>
     <Age>22</Age>
