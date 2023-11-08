@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"> 
+
+<!--HW8 - XQuery. Created by ER 11/02/2023 -->
+
+<meta name="description" content="XML, JSON, XSLT, XQUERY.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>XQuery Report</title>
+
+<style>
+
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  background-color: #4747C2;
+  color: #fff;
+  text-align: center;
+  padding: 1.25em;
+  font-size: 2em;
+  text-shadow: 2px 2px 5px #999;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1em; 
+}
+
+code {
+  background-color: #ddd;
+  border: 1px solid #999;
+  padding: 0.1em;
+  display: block;
+  margin: 0.5em;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: #eee;
+  border: 1px solid #999;
+  padding: 0.5em;
+  display: block; 
+  margin: 0.5em;
+  font-size: 0.9em;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.center {
+  text-align: left;
+  margin: 0;
+  width: auto;
+}
+
+/* Styled Table */
+
+table {
+  width: 70%;
+  margin: 2em auto;
+  border-collapse: collapse; 
+}
+
+th, td {
+  padding: 1em;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4747C2;
+  color: #fff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>XQuery Report</h1>
+
+<div class="center">
+
+<p>XQuery is a query language that is designed specifically for querying XML data. The main characteristic of XQuery is its ability to extract and manipulate data from XML documents. XQuery provides the means to access, search, and transform XML in a simple and efficient way.</p>
+
+<p>To demonstrate how XQuery works, I examined the XML document hw8.xml and the XQuery code in hw8.xq. The full XQuery code is:</p>
+
+<pre>
+xquery version "1.0";
+
+for $b in
+doc("hw8.xml")/bookstore/book
+where
+$b/price < 30 
+return $b/title
+</pre>
+
+<p>This XQuery retrieves the titles of all the books that have a price less than 30. When run on hw8.xml, it returns:</p>
+
+<pre>
+Harry Potter
+The Snowy Days
+</pre>
+
+<p>It works by first iterating through each &lt;book&gt; element, checking if the price is less than 30, and returning the &lt;title&gt; if so.</p>
+
+<p>XQIB (XQuery API for Java) is a standard API that enables XQuery to interoperate with Java code. XQIB allows Java applications to execute XQuery code and process the results. Some key capabilities of XQIB include:</p>
+
+<ul>
+<li>Executing XQuery expressions and queries</li>
+<li>Passing parameters from Java code to XQuery</li>
+<li>Handling results returned from XQuery back to Java</li>
+<li>Compiling and caching XQuery queries for better performance</li>
+</ul>
+
+<h2>Pros and Cons of XQuery</h2>
+
+<div class="pros-cons">
+
+<table>
+
+<tr>
+<th>Pros</th>
+<th>Cons</th>  
+</tr>
+
+<tr>
+<td>XML Data Handling: XQuery excels at querying and transforming XML data. It offers powerful tools for extracting, filtering, and restructuring XML content.</td>
+<td>Limited Adoption: While XQuery is a powerful language for working with XML data, it has not seen widespread adoption in comparison to other query languages like SQL. This can limit the availability of resources and support within the developer community.</td>
+</tr>
+
+
+<tr>
+<td>Declarative Syntax: Its declarative syntax makes it easy for users to express their intent clearly and concisely.</td>
+<td>Learning Curve: XQuery can have a steeper learning curve, especially for beginners or those who are new to XML technologies.</td>
+</tr>
+
+
+<tr>
+<td>Strong Typing: The static typing system in XQuery helps catch errors at compile time, improving code quality.</td>
+<td>Standardization: XQuery is not as standardized as SQL, which has a long history of usage and widespread industry support. This might lead to variations in XQuery implementations and compatibility issues between different systems.</td>
+</tr>
+
+</table>
+
+</div> 
+
+<p>By using XQIB, Java developers can leverage the power of XQuery within their applications to efficiently query and process XML data.</p>
+
+<p>In summary, XQuery is designed for querying XML while XQIB enables tight integration between XQuery and Java environments. Together they provide a robust solution for accessing, manipulating, and processing XML data.</p>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://www.w3.org/TR/xquery-31/">XQuery 3.1 Specification</a></li>
+<li><a href="https://xqib.org/">XQIB.org</a></li>
+<li><a href="http://www.datypic.com/books/xquery/examples.html">XQuery by Priscilla Walmsley</a></li>
+<li><a href="https://docs.basex.org/wiki/XQuery">BaseX</a></li>
+<li><a href="https://xqueryfiddle.liberty-development.net/"> XQuery Fiddle</a></li>
+</ul>
+
+</div>
+
+</body>
+</html>
