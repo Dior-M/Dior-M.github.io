@@ -1,0 +1,21 @@
+<!-- gradient.svg -->
+<svg width="3500" height="2300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Linear gradient for shape fill -->
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgb(255,255,0)" stop-opacity="1" />
+      <stop offset="100%" stop-color="rgb(255,0,0)" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <!-- Ellipse filled with the defined gradient -->
+  <ellipse cx="1750" cy="1150" rx="800" ry="400" fill="url(#grad1)" transform="rotate(0 1750 1150)">
+    <!-- Animation for the ellipse's rotation -->
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 1750 1150"
+      to="360 1750 1150"
+      dur="5s"
+      repeatCount="indefinite" />
+  </ellipse>
+</svg>

@@ -1,0 +1,8 @@
+<!-- circle.svg -->
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue circle with red border -->
+  <circle cx="150" cy="150" r="120" fill="blue" stroke="red" stroke-width="5">
+    <!-- Animation for the circle's radius -->
+    <animate attributeName="r" from="120" to="60" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>

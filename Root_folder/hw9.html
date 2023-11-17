@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Files in CNIT 131A</title>
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato&display=swap" rel="stylesheet">
+
+  <style>
+    /* Gradient Background Animation */
+    body {
+      background: linear-gradient(-45deg, #3bade3, #a8e063, #fcdf8a, #f694c1);
+      animation: gradient 15s ease infinite;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Typography */
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.625em; /* Adjusted to 42px equivalent */
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    p {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.125em; /* Adjusted to 18px equivalent */
+      color: #000; /* Black text color for descriptions */
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Carousel */
+    .carousel-container {
+      margin: 2em auto;
+      padding: 30px;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel {
+      margin-top: 2em;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>SVG Files in CNIT 131A</h1>
+
+  <div class="container">
+    <div class="carousel-container">
+      <div class="carousel">
+        <div>
+          <p>
+            In this project, I have created three SVG files to showcase various shapes and animations. The first SVG file, "rectangle.svg," features a yellow rectangle with a blue border. I used the &lt;rect&gt; element and added a subtle animation to dynamically change its position.
+          </p>
+          <img src="rectangle.svg" alt="Yellow Rectangle with Blue Border">
+        </div>
+
+        <div>
+          <p>
+            The second SVG file, "circle.svg," presents a vibrant blue circle with a red border. I utilized the &lt;circle&gt; element and included an animation to modify its radius, creating an engaging visual effect.
+          </p>
+          <img src="circle.svg" alt="Blue Circle with Red Border">
+        </div>
+
+        <div>
+          <p>
+            Lastly, the "gradient.svg" file displays an ellipse filled with a gradient transitioning from yellow to red. This file combines the &lt;ellipse&gt; element with a linear gradient defined in the &lt;defs&gt; section. Additionally, the ellipse undergoes a rotation animation to enhance its visual appeal.
+          </p>
+          <img src="gradient.svg" alt="Shape with Gradient Fill">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery and Slick Carousel JS -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    // Initialize Slick Carousel
+    $(document).ready(function () {
+      $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 550,
+        slidesToShow: 1,
+        adaptiveHeight: true
+      });
+    });
+  </script>
+
+</body>
+
+</html>
