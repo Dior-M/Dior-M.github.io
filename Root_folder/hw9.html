@@ -6,13 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SVG Files in CNIT 131A</title>
 
- <!-- Slick Carousel CSS -->
+  <!-- Slick Carousel CSS -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato&display=swap" rel="stylesheet">
-
 
   <style>
     /* Gradient Background Animation */
@@ -72,21 +71,50 @@
       border-radius: 10px;
       background: white;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
-    .carousel img[src="circle.svg"] {
-      width: 65%;
-      margin: 0 auto;
+     .carousel img[src="circle.svg"] {
+      width: 50%;
       display: block;
+      margin: 0 auto; /* Center the image horizontally */
     }
+    
+     .carousel img[src="gradient.svg"] {
+      width: 85%;
+      display: block;
+      margin: 0 auto; /* Center the image horizontally */
+    }
+
+
 
     .carousel img {
       width: 100%;
       height: auto;
+      display: block;
     }
 
-    .slick-dots li button:before {
-      font-size: 20px;
+    /* Additional styling for carousel navigation */
+    .carousel-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .prev-next-btn {
+      cursor: pointer;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+
+    .current-slide {
+      font-weight: bold;
+      margin: 0 5px;
     }
   </style>
 
@@ -103,27 +131,34 @@
       <h2>SVG Files Showcase</h2> <!-- Adding a heading for the section -->
       <div class="carousel">
         <article>
-	  <h3>Rectangle</h3>
+          <h3>Rectangle</h3>
           <p>
             In this project, I have created three SVG files to showcase various shapes and animations. The first SVG file, "rectangle.svg," features a yellow rectangle with a blue border. I used the &lt;rect&gt; element and added a subtle animation to dynamically change its position.
           </p>
           <img src="rectangle.svg" alt="Yellow Rectangle with Blue Border">
         </article>
         <article>
-	<h3>Circle</h3>
+          <h3>Circle</h3>
           <p>
             The second SVG file, "circle.svg," presents a vibrant blue circle with a red border. I utilized the &lt;circle&gt; element and included an animation to modify its radius, creating an engaging visual effect.
           </p>
-          <img src="circle.svg" alt="Blue Circle with Red Border">
+          <img src="circle.svg" alt="Blue Circle with Red Border" style="width: 50%;">
         </article>
         <article>
-	  <h3>Gradient</h3>
+          <h3>Gradient</h3>
           <p>
             Lastly, the "gradient.svg" file displays an ellipse filled with a gradient transitioning from yellow to red. This file combines the &lt;ellipse&gt; element with a linear gradient defined in the &lt;defs&gt; section. Additionally, the ellipse undergoes a rotation animation to enhance its visual appeal.
           </p>
-          <img src="gradient.svg" alt="Shape with Gradient Fill">
+          <img src="gradient.svg" alt="Shape with Gradient Fill" style="width: 85%;">
         </article>
       </div>
+
+      <!-- Carousel Navigation -->
+      <section class="carousel-nav">
+        <button class="prev-next-btn" data-dir="prev">&#9665; Prev</button>
+        <span class="current-slide">1</span>/<span class="total-slides">3</span>
+        <button class="prev-next-btn" data-dir="next">Next &#9655;</button>
+      </section>
     </section>
   </div>
 
@@ -134,13 +169,37 @@
   <script>
     // Initialize Slick Carousel
     $(document).ready(function () {
-      $('.carousel').slick({
-        dots: true,
+      var $carousel = $('.carousel');
+      var $prevBtn = $('.prev-next-btn[data-dir="prev"]');
+      var $nextBtn = $('.prev-next-btn[data-dir="next"]');
+      var $currentSlide = $('.current-slide');
+      var $totalSlides = $('.total-slides');
+
+      $carousel.slick({
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         adaptiveHeight: true
       });
+
+      // Update indicators on slide change
+      $carousel.on('afterChange', function (event, slick, currentSlide) {
+        $currentSlide.text(currentSlide + 1);
+      });
+
+      // Previous button click
+      $prevBtn.click(function () {
+        $carousel.slick('slickPrev');
+      });
+
+      // Next button click
+      $nextBtn.click(function () {
+        $carousel.slick('slickNext');
+      });
+
+      // Display total slides
+      $totalSlides.text($carousel.slick('getSlick').slideCount);
     });
   </script>
 
