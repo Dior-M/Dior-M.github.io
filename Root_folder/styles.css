@@ -17,7 +17,7 @@ header {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2.5rem;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -29,13 +29,21 @@ table {
     margin-top: 1rem;
 }
 
-th, td {
+th {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Prevent line break in header cells */
+    text-align: left;
+}
+
+td {
     padding: 0.5rem;
     border-bottom: 1px solid #ddd;
 }
 
-th {
-    text-align: left;
+td:last-child {
+    max-width: 400px; /* Adjust the width as needed */
+    word-wrap: break-word;
 }
 
 a {
