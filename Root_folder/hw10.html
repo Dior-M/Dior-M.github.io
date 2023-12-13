@@ -1,39 +1,83 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title style="text-shadow: 2px 2px lavender; color: plum; font-size: 1.5em;">HW 10 JSON</title>
+<style>
+body {
+  background-color: light cyan;
+  font-family: Arial;
+  font-size: 1em;  
+}
+
+h1 {
+  color: palevioletred;
+  text-align: center;
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.2em;  
+}
+
+.question {
+  font-weight: bold; 
+  font-size: 1.5em;
+  color: peachpuff;   
+}
+
+code {
+  background-color: lavenderblush;
+  display: block;
+  padding: 0.5em;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+}
+
+</style>
+</head>
+
 <body>
 
-<p>Question: Suppose you have the following code in JavaScript:</p>
+<h1>JSON Data Parsing</h1> 
+
+<p class="question">Question: Suppose you have the following code in JavaScript:</p>
 
 <code>
 var friends = [
-  {  
+  { 
     "name": "John",
     "age": "28",
     "gender": "male",
-    "profession": "sales rep"
+    "profession": "sales rep" 
   },
   {
     "name": "Maryenne",
-    "age": "26", 
+    "age": "26",  
     "gender": "female",
     "profession": "web developer"
   }
-];
-
-var tablecell1 = '<tr><td>' + friends[0].name + '</td><td>' + friends[0].profession + '</td></tr>';
+];   
 </code>
 
-<p>Then, what will be the content of the variable <b>tablecell1</b>?</p>
+<p class="question">If you add the following command:</p>
 
-<b>Answer:</b> 
+<code style="background-color: lavender;">
+var tablecell1 = '&lt;tr&gt;&lt;td&gt;' + friends[0].name + '&lt;/td&gt;&lt;td&gt;' + friends[0].profession + '&lt;/td&gt;&lt;/tr&gt;';
+</code>
 
-<code>
+<p class="question">Then, what will be the content of the variable <b>tablecell1</b>?</p> 
+
+<b>Answer:</b>  
+
+<code>  
 &lt;tr&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;sales rep&lt;/td&gt;&lt;/tr&gt;
 </code>
 
 <p>This concatenates the name and profession properties from the first element in the friends array.</p>
 
-<a href="hw10.json">Link to hw10.json file</a>
+<a href="hw10.json" target="_blank">Link to hw10.json file</a>
 
 </body>
 </html>
