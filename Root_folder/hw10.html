@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Question: Suppose you have the following code in JavaScript:</p>
+
+<code>
+var friends = [
+  {  
+    "name": "John",
+    "age": "28",
+    "gender": "male",
+    "profession": "sales rep"
+  },
+  {
+    "name": "Maryenne",
+    "age": "26", 
+    "gender": "female",
+    "profession": "web developer"
+  }
+];
+
+var tablecell1 = '<tr><td>' + friends[0].name + '</td><td>' + friends[0].profession + '</td></tr>';
+</code>
+
+<p>Then, what will be the content of the variable <b>tablecell1</b>?</p>
+
+<b>Answer:</b> 
+
+<code>
+&lt;tr&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;sales rep&lt;/td&gt;&lt;/tr&gt;
+</code>
+
+<p>This concatenates the name and profession properties from the first element in the friends array.</p>
+
+<a href="hw10.json">Link to hw10.json file</a>
+
+</body>
+</html>
